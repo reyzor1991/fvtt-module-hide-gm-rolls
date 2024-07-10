@@ -167,7 +167,7 @@ class HideGMRolls {
 		}
 
 
-		if (isNewerVersion(game.version, "10")) {
+		if (foundry.utils.isNewerVersion(game.version, "10")) {
 			if (app.sound) {
 				app.sound = null;
 			}
@@ -314,7 +314,7 @@ class HideGMRolls {
 			}
 
 			let tokenId;
-			if (isNewerVersion(game.version, "10")) {
+			if (foundry.utils.isNewerVersion(game.version, "10")) {
 				tokenId = doc.speaker?.token;
 			} else {
 				tokenId = doc.data?.speaker?.token;
